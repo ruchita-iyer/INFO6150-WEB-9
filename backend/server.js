@@ -24,19 +24,3 @@ app.use(notFound);
 app.use(errorHandler)
 
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));
-
-/*mongoose.connect(
-    process.env.MONGODB_URL,
-    {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        //useCreateIndex: true
-    },
-
-    (error) => {
-        if(error) throw error;
-        console.log("MongoDB connected");
-    }
-);*/
-
-//app.use('/api', require('./routes/router'));
