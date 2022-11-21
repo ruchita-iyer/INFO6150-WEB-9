@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const notes = require("./data/notes")
+
 require("dotenv").config();
 const connectDB = require("./config/db");
 const { errorHandler, notFound } = require("./middleware/errorMiddleware");
@@ -17,9 +17,7 @@ app.get('/', (req,res) =>{
     res.send("api is running");
 });
 
-app.get('/api/notes', (req,res) => {
-    res.json(notes);
-});
+
 
 app.use('/api/users', require('./routes/router'));
 app.use(notFound);
